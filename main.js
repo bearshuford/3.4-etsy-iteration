@@ -31,3 +31,15 @@ var gbp = items.filter(function(obj) {
    return obj.currency_code === "GBP";
 });
 console.log(gbp[0].title+" costs £"+gbp[0].price);
+
+/////////
+// FOUR
+// items made of wood
+////////////////
+var woodItems = items.filter(function(obj) {
+   return obj.materials.includes('wood');
+});
+
+woodItems.forEach(function(obj){
+   console.log(obj.title);
+});
