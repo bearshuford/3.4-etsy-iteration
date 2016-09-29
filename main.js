@@ -18,6 +18,16 @@ console.log('The average price is $', avg);
 // array of items that cost b/w $14.00 & $18.00
 ////////////////
 var twoArray = items.filter(function(obj) {
-   return (obj.price > 14 && obj.price < 18)
+   return (obj.price > 14 && obj.price < 18);
 }); // filter by price criteria
 console.log("Items that cost between $14.00 USD and $18.00 USD:", twoArray);
+
+
+/////////
+// THREE
+// item with a GBP currency code
+////////////////
+var gbp = items.filter(function(obj) {
+   return obj.currency_code === "GBP";
+});
+console.log(gbp[0].title+" costs £"+gbp[0].price);
