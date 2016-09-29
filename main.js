@@ -47,7 +47,7 @@ woodItems.forEach(function(obj){
 
 
 /////////
-// Five
+// FIVE
 // items made of 8 or more materials
 ////////////////
 var complexItems = items.filter(function(obj) {
@@ -58,3 +58,12 @@ complexItems.forEach(function(obj) {
    console.log(obj.title, "has", obj.materials.length, "materials:");
    obj.materials.forEach( function(str) {console.log(str);});
 });
+
+/////////
+// SIX
+// number of items made by thier sellers
+////////////////
+var homemadeCount = items.filter(function(obj){
+   return obj.who_made === "i_did";
+}).length;
+console.log(homemadeCount, "were made by their sellers");
