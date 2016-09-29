@@ -32,6 +32,7 @@ var gbp = items.filter(function(obj) {
 });
 console.log(gbp[0].title+" costs £"+gbp[0].price);
 
+
 /////////
 // FOUR
 // items made of wood
@@ -42,4 +43,18 @@ var woodItems = items.filter(function(obj) {
 
 woodItems.forEach(function(obj){
    console.log(obj.title);
+});
+
+
+/////////
+// Five
+// items made of 8 or more materials
+////////////////
+var complexItems = items.filter(function(obj) {
+   return obj.materials.length > 7;
+});
+
+complexItems.forEach(function(obj) {
+   console.log(obj.title, "has", obj.materials.length, "materials:");
+   obj.materials.forEach( function(str) {console.log(str);});
 });
