@@ -13,6 +13,7 @@ var sum = prices.reduce(function(total,current) {
 var avg = (sum/items.length).toFixed(2);  // calculate average to hundredths
 console.log('The average price is $', avg);
 
+
 /////////
 // TWO
 // array of items that cost b/w $14.00 & $18.00
@@ -58,6 +59,7 @@ complexItems.forEach(function(obj) {
    console.log(obj.title, "has", obj.materials.length, "materials:");
    obj.materials.forEach( function(str) {console.log(str);});
 });
+
 
 /////////
 // SIX
